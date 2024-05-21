@@ -2,6 +2,12 @@ name: bucket_list
 packages:
   - bucket_list
 scripts:
+  codegen:
+    run: >-
+      dart run build_runner build --delete-conflicting-outputs &&
+      fluttergen &&
+      dart pub global run intl_utils:generate
+
   flutterfire:
     run: >-
       flutterfire configure 
@@ -13,4 +19,3 @@ scripts:
       -f
       --android-package-name=pl.wsiiz.bucket_list
       --ios-bundle-id=pl.wsiiz.bucket_list
-     
