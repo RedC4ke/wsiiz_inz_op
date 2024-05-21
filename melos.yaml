@@ -1,0 +1,16 @@
+name: bucket_list
+packages:
+  - bucket_list
+scripts:
+  flutterfire:
+    run: >-
+      flutterfire configure 
+      --project=bucketlist-2137-prod
+      --account=mwyczarski@gmail.com
+      --platforms=ios,android 
+      -o "lib/firebase_options_prod.dart" 
+      --yes 
+      -f
+      --android-package-name=pl.wsiiz.bucket_list
+      --ios-bundle-id=pl.wsiiz.bucket_list
+     
