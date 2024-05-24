@@ -14,8 +14,8 @@ scripts:
       --project=bucketlist-2137-prod
       --account=mwyczarski@gmail.com
       --platforms=ios,android 
-      -o "lib/firebase_options_prod.dart" 
+      -o "lib/firebase_options.dart" 
       --yes 
       -f
-      --android-package-name=pl.wsiiz.bucket_list
-      --ios-bundle-id=pl.wsiiz.bucket_list
+      --android-package-name=pl.wsiiz.bucketlist
+      --ios-bundle-id=pl.wsiiz.bucketlist

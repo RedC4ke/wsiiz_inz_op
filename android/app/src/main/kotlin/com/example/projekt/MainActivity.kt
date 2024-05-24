@@ -1,4 +1,4 @@
-package pl.wsiiz.bucket_list
+package pl.wsiiz.bucketlist
 
 import io.flutter.embedding.android.FlutterActivity
 

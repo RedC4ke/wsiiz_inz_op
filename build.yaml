@@ -7,7 +7,9 @@ targets:
       freezed|freezed:
         generate_for:
           - "lib/features/**/application/**_state.dart"
+          - "lib/application/**/**_state.dart"
       riverpod_generator|riverpod_generator:
         generate_for:
           - "lib/features/**/application/**_controller.dart"
           - "lib/core/utils/general_providers.dart"
+          - "lib/application/**/**_controller.dart"

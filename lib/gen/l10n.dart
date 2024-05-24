@@ -50,11 +50,21 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Kolekcja`
-  String get collection {
+  /// `Your list`
+  String get your_list {
     return Intl.message(
-      'Kolekcja',
-      name: 'collection',
+      'Your list',
+      name: 'your_list',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred. Please try again later.`
+  String get err_unknown {
+    return Intl.message(
+      'An unknown error occurred. Please try again later.',
+      name: 'err_unknown',
       desc: '',
       args: [],
     );
@@ -66,7 +76,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   List<Locale> get supportedLocales {
     return const <Locale>[
-      Locale.fromSubtags(languageCode: 'pl'),
+      Locale.fromSubtags(languageCode: 'en'),
     ];
   }
 

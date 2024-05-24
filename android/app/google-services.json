@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "290515890631",
+    "project_id": "bucketlist-2137-prod",
+    "storage_bucket": "bucketlist-2137-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290515890631:android:8830cc01db9cf7fcbae9e2",
+        "android_client_info": {
+          "package_name": "pl.wsiiz.bucketlist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzLpNG5MzBwjRUc1fWEKNOYBn0PtTFIE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

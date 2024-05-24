@@ -8,10 +8,26 @@ abstract class BLTheme {
   static final ThemeData light = ThemeData(
     useMaterial3: true,
     textTheme: BlTextTheme.theme.apply(
-      displayColor: BLColors.grayscaleWhite,
-      bodyColor: BLColors.grayscaleWhite,
+      displayColor: BLColors.inkDark,
+      bodyColor: BLColors.inkDark,
     ),
     colorScheme: BlColorScheme.scheme,
     inputDecorationTheme: BlInputDecorationTheme.theme,
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: BLColors.primaryBase,
+      shape: CircleBorder(),
+      sizeConstraints: BoxConstraints.tightFor(
+        height: 52,
+        width: 52,
+      ),
+      elevation: 0,
+    ),
+    bottomAppBarTheme: const BottomAppBarTheme(
+      elevation: 0,
+    ),
+    dividerTheme: const DividerThemeData(
+      space: 1,
+      thickness: 1,
+    ),
   );
 }
