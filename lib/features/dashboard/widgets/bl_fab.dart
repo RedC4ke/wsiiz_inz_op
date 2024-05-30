@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:bucket_list/core/navigation/app_router.dart';
 import 'package:bucket_list/core/theme/bl_decorations.dart';
 import 'package:bucket_list/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BLFab extends StatelessWidget {
-  const BLFab({super.key});
+class BlFab extends StatelessWidget {
+  const BlFab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,9 @@ class BLFab extends StatelessWidget {
         boxShadow: BlDecorations.shadowSmall,
       ),
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          context.pushRoute(const AddBucketListItemRoute());
+        },
         child: Stack(
           children: [
             const FaIcon(

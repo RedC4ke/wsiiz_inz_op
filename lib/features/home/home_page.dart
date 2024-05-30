@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BLAppBar(
+      appBar: BlAppBar(
         title: context.s.your_list,
       ),
     );

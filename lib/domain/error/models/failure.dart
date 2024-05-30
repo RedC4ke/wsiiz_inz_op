@@ -5,6 +5,11 @@ sealed class Failure {
 }
 
 class UnexpectedFailure extends Failure {
+  UnexpectedFailure({required this.exception, this.stackTrace});
+
+  final Exception exception;
+  final StackTrace? stackTrace;
+
   @override
   String get message => S.current.err_unknown;
 }

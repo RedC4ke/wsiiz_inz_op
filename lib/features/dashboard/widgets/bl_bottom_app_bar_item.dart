@@ -2,8 +2,8 @@ import 'package:bucket_list/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BLBottomAppBarItem extends StatelessWidget {
-  const BLBottomAppBarItem({
+class BlBottomAppBarItem extends StatelessWidget {
+  const BlBottomAppBarItem({
     required this.icon,
     required this.onPressed,
     this.isActive = false,

@@ -9,8 +9,8 @@ part 'autocomplete_prediction.g.dart';
 class AutocompletePrediction with EquatableMixin {
   AutocompletePrediction({
     required this.description,
-    required this.matchedSubstrings,
     required this.structuredFormatting,
+    this.matchedSubstrings = const [],
     this.placeId,
     this.types = const [],
   });
@@ -20,7 +20,7 @@ class AutocompletePrediction with EquatableMixin {
 
   final String description;
   final List<AutocompleteSubstring> matchedSubstrings;
-  final AutocompleteStructuredFormat structuredFormatting;
+  final AutocompleteStructuredFormat? structuredFormatting;
   final String? placeId;
   final List<String> types;
 

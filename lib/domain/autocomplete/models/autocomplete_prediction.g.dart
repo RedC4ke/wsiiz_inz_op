@@ -10,11 +10,15 @@ AutocompletePrediction _$AutocompletePredictionFromJson(
         Map<String, dynamic> json) =>
     AutocompletePrediction(
       description: json['description'] as String,
-      matchedSubstrings: (json['matchedSubstrings'] as List<dynamic>)
-          .map((e) => AutocompleteSubstring.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      structuredFormatting: AutocompleteStructuredFormat.fromJson(
-          json['structuredFormatting'] as Map<String, dynamic>),
+      structuredFormatting: json['structuredFormatting'] == null
+          ? null
+          : AutocompleteStructuredFormat.fromJson(
+              json['structuredFormatting'] as Map<String, dynamic>),
+      matchedSubstrings: (json['matchedSubstrings'] as List<dynamic>?)
+              ?.map((e) =>
+                  AutocompleteSubstring.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       placeId: json['placeId'] as String?,
       types:
           (json['types'] as List<dynamic>?)?.map((e) => e as String).toList() ??

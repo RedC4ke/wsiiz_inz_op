@@ -8,6 +8,7 @@ part of 'bucket_list_item.dart';
 
 BucketListItem _$BucketListItemFromJson(Map<String, dynamic> json) =>
     BucketListItem(
+      listId: json['listId'] as String,
       title: json['title'] as String,
       description: json['description'] as String,
       isCompleted: json['isCompleted'] as bool,
@@ -21,6 +22,7 @@ BucketListItem _$BucketListItemFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$BucketListItemToJson(BucketListItem instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'listId': instance.listId,
       'title': instance.title,
       'description': instance.description,
       'isCompleted': instance.isCompleted,

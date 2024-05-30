@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BLAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const BLAppBar({
+class BlAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const BlAppBar({
     this.title,
     super.key,
   });

@@ -15,6 +15,18 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AddBucketListItemRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AddBucketListItemPage(),
+      );
+    },
+    AddBucketListRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AddBucketListPage(),
+      );
+    },
     DashboardRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -46,6 +58,34 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AddBucketListItemPage]
+class AddBucketListItemRoute extends PageRouteInfo<void> {
+  const AddBucketListItemRoute({List<PageRouteInfo>? children})
+      : super(
+          AddBucketListItemRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AddBucketListItemRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [AddBucketListPage]
+class AddBucketListRoute extends PageRouteInfo<void> {
+  const AddBucketListRoute({List<PageRouteInfo>? children})
+      : super(
+          AddBucketListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AddBucketListRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

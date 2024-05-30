@@ -1,8 +1,8 @@
 import 'package:bucket_list/data/http/google_maps/google_maps_client.dart';
 import 'package:bucket_list/domain/autocomplete/models/autocomplete_response.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'google_maps_datasource.g.dart';
 

@@ -1,9 +1,10 @@
 import 'package:bucket_list/data/firebase/firestore/firestore_datasource.dart';
+import 'package:bucket_list/domain/bucket_list/models/bucket_list.dart';
 import 'package:bucket_list/domain/bucket_list/models/bucket_list_item.dart';
 import 'package:bucket_list/domain/error/catch_error.dart';
 import 'package:bucket_list/domain/error/models/failure.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 final bucketListRepositoryProvider = Provider<BucketListRepository>((ref) {
   return BucketListRepository(
@@ -32,17 +33,31 @@ class BucketListRepository {
     return _firestore.updateBucketListItem(item);
   }
 
-  TaskEither<Failure, void> deleteBucketListItem(String id) =>
-      catchError(() => _deleteBucketListItem(id));
+  TaskEither<Failure, void> deleteBucketListItem(BucketListItem item) =>
+      catchError(() => _deleteBucketListItem(item));
 
-  Future<void> _deleteBucketListItem(String id) {
-    return _firestore.deleteBucketListItem(id);
+  Future<void> _deleteBucketListItem(BucketListItem item) {
+    return _firestore.deleteBucketListItem(item);
   }
 
-  TaskEither<Failure, List<BucketListItem>> getBucketList() =>
-      catchError(_getBucketList);
+  TaskEither<Failure, List<BucketListItem>> getBucketList(String listId) =>
+      catchError(() => _getBucketList(listId));
 
-  Future<List<BucketListItem>> _getBucketList() {
-    return _firestore.getBucketList();
+  Future<List<BucketListItem>> _getBucketList(String listId) {
+    return _firestore.getBucketList(listId);
+  }
+
+  TaskEither<Failure, List<BucketList>> getBucketLists() =>
+      catchError(_getBucketLists);
+
+  Future<List<BucketList>> _getBucketLists() {
+    return _firestore.getBucketLists();
+  }
+
+  TaskEither<Failure, BucketList> addBucketList(BucketList list) =>
+      catchError(() => _addBucketList(list));
+
+  Future<BucketList> _addBucketList(BucketList list) {
+    return _firestore.addBucketList(list);
   }
 }

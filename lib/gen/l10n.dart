@@ -60,11 +60,191 @@ class S {
     );
   }
 
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remove`
+  String get remove {
+    return Intl.message(
+      'Remove',
+      name: 'remove',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No data`
+  String get no_data {
+    return Intl.message(
+      'No data',
+      name: 'no_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No results`
+  String get no_results {
+    return Intl.message(
+      'No results',
+      name: 'no_results',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `An unknown error occurred. Please try again later.`
   String get err_unknown {
     return Intl.message(
       'An unknown error occurred. Please try again later.',
       name: 'err_unknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new list`
+  String get create_bucket_list {
+    return Intl.message(
+      'Create a new list',
+      name: 'create_bucket_list',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add cover image`
+  String get add_cover_image {
+    return Intl.message(
+      'Add cover image',
+      name: 'add_cover_image',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose a list`
+  String get choose_bucket_list {
+    return Intl.message(
+      'Choose a list',
+      name: 'choose_bucket_list',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add a new item`
+  String get add_bucket_list_item {
+    return Intl.message(
+      'Add a new item',
+      name: 'add_bucket_list_item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add location`
+  String get add_location {
+    return Intl.message(
+      'Add location',
+      name: 'add_location',
       desc: '',
       args: [],
     );

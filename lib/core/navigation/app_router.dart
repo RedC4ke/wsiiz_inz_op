@@ -1,4 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bucket_list/features/bucket_list/add_bucket_list_item_page.dart';
+import 'package:bucket_list/features/bucket_list/add_bucket_list_page.dart';
 import 'package:bucket_list/features/dashboard/dashboard_page.dart';
 import 'package:bucket_list/features/discover/discover_page.dart';
 import 'package:bucket_list/features/home/home_page.dart';
@@ -24,5 +26,7 @@ class AppRouter extends _$AppRouter {
             AutoRoute(page: ProfileRoute.page),
           ],
         ),
+        AutoRoute(page: AddBucketListItemRoute.page),
+        AutoRoute(page: AddBucketListRoute.page),
       ];
 }

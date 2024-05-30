@@ -8,6 +8,7 @@ part 'bucket_list_item.g.dart';
 @JsonSerializable()
 class BucketListItem extends FirestoreModel with EquatableMixin {
   BucketListItem({
+    required this.listId,
     required this.title,
     required this.description,
     required this.isCompleted,
@@ -18,6 +19,7 @@ class BucketListItem extends FirestoreModel with EquatableMixin {
   factory BucketListItem.fromJson(Map<String, dynamic> json) =>
       _$BucketListItemFromJson(json);
 
+  final String listId;
   final String title;
   final String description;
   final bool isCompleted;
@@ -27,6 +29,7 @@ class BucketListItem extends FirestoreModel with EquatableMixin {
 
   @override
   BucketListItem copyWith({
+    String? listId,
     String? id,
     String? title,
     String? description,
@@ -34,6 +37,7 @@ class BucketListItem extends FirestoreModel with EquatableMixin {
     BucketListItemGeolocation? geolocation,
   }) {
     return BucketListItem(
+      listId: listId ?? this.listId,
       id: id ?? this.id,
       title: title ?? this.title,
       description: description ?? this.description,
@@ -44,6 +48,7 @@ class BucketListItem extends FirestoreModel with EquatableMixin {
 
   @override
   List<Object?> get props => [
+        listId,
         id,
         title,
         description,

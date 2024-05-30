@@ -22,8 +22,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add": MessageLookupByLibrary.simpleMessage("Add"),
+        "add_bucket_list_item":
+            MessageLookupByLibrary.simpleMessage("Add a new item"),
+        "add_cover_image":
+            MessageLookupByLibrary.simpleMessage("Add cover image"),
+        "add_location": MessageLookupByLibrary.simpleMessage("Add location"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "choose_bucket_list":
+            MessageLookupByLibrary.simpleMessage("Choose a list"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "create": MessageLookupByLibrary.simpleMessage("Create"),
+        "create_bucket_list":
+            MessageLookupByLibrary.simpleMessage("Create a new list"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "err_unknown": MessageLookupByLibrary.simpleMessage(
             "An unknown error occurred. Please try again later."),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "no_data": MessageLookupByLibrary.simpleMessage("No data"),
+        "no_results": MessageLookupByLibrary.simpleMessage("No results"),
+        "remove": MessageLookupByLibrary.simpleMessage("Remove"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "your_list": MessageLookupByLibrary.simpleMessage("Your list")
       };
 }
