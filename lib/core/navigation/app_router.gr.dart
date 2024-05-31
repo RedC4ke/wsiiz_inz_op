@@ -22,7 +22,7 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     AddBucketListRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
+      return AutoRoutePage<BucketList>(
         routeData: routeData,
         child: const AddBucketListPage(),
       );

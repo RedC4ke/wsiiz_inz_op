@@ -18,6 +18,7 @@ class BlAutocompleteItem extends StatelessWidget {
     final structured = prediction.structuredFormatting;
 
     return InkWell(
+      onTap: () => onSelected(prediction),
       child: Container(
         color: context.colorScheme.surface,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

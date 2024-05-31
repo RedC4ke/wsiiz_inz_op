@@ -9,7 +9,7 @@ class BucketList extends FirestoreModel with EquatableMixin {
   BucketList({
     required this.name,
     required this.description,
-    required this.imageUrl,
+    this.imageUrl,
     super.id,
   });
 

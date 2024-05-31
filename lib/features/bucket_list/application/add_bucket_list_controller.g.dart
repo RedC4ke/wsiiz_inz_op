@@ -7,7 +7,7 @@ part of 'add_bucket_list_controller.dart';
 // **************************************************************************
 
 String _$addBucketListControllerHash() =>
-    r'c40ab01704b5343e01233242bdd9dbab03b278f7';
+    r'c43323a8fa7e0b13778c2a28f54630eff6fd3f33';
 
 /// See also [AddBucketListController].
 @ProviderFor(AddBucketListController)

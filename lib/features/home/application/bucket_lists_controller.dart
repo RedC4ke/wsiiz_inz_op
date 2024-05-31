@@ -24,4 +24,12 @@ class BucketListsController extends _$BucketListsController {
       (r) => state = LoadableState.success(r),
     );
   }
+
+  void addListExternally(BucketList list) {
+    if (stateOrNull == null) return;
+    state.maybeWhen(
+      orElse: () {},
+      success: (data) => state = LoadableState.success([...data, list]),
+    );
+  }
 }

@@ -8,7 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class BlAutocompleteFormField extends ConsumerWidget {
-  const BlAutocompleteFormField({super.key});
+  const BlAutocompleteFormField({
+    this.onSelected,
+    super.key,
+  });
+
+  final void Function(AutocompletePrediction)? onSelected;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -40,6 +45,7 @@ class BlAutocompleteFormField extends ConsumerWidget {
           ),
         );
       },
+      displayStringForOption: (option) => option.description,
       optionsViewBuilder: (context, onSelected, options) {
         return Material(
           elevation: 4,
@@ -59,7 +65,9 @@ class BlAutocompleteFormField extends ConsumerWidget {
           ),
         );
       },
-      onSelected: (option) {},
+      onSelected: (option) {
+        onSelected?.call(option);
+      },
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:bucket_list/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
 class BlLoading extends StatelessWidget {
-  const BlLoading({required this.transparent, super.key});
+  const BlLoading({this.transparent = true, super.key});
 
   final bool transparent;
 
@@ -12,7 +12,7 @@ class BlLoading extends StatelessWidget {
       child: ColoredBox(
         color: transparent
             ? Colors.transparent
-            : context.colorScheme.surface.withOpacity(0.3),
+            : context.colorScheme.surface.withOpacity(0.45),
         child: const Center(
           child: SizedBox(
             width: 64,

@@ -12,8 +12,7 @@ class BlFormDropdownButton<T> extends StatelessWidget {
     this.validator,
     this.value,
     this.onChanged,
-    this.isLeadingIcon = true,
-    this.borderRadius = 15,
+    this.borderRadius = 16,
     super.key,
   });
 
@@ -22,7 +21,6 @@ class BlFormDropdownButton<T> extends StatelessWidget {
   final String? label;
   final List<DropdownMenuItem<Either<VoidCallback, T>>> items;
   final ValueChanged<T?>? onChanged;
-  final bool isLeadingIcon;
   final T? value;
   final double borderRadius;
 
@@ -51,18 +49,21 @@ class BlFormDropdownButton<T> extends StatelessWidget {
               underline: const SizedBox.shrink(),
               enableFeedback: true,
               iconStyleData: IconStyleData(
-                icon: FaIcon(
+                icon: const FaIcon(
                   FontAwesomeIcons.chevronDown,
-                  color: isLeadingIcon ? null : Colors.transparent,
                 ),
+                iconSize: 20,
+                iconEnabledColor: context.colorScheme.onSurface,
               ),
               buttonStyleData: ButtonStyleData(
-                padding: const EdgeInsets.only(right: 10),
+                padding: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   color: context.colorScheme.onPrimary,
                   borderRadius: BorderRadius.circular(borderRadius),
                   border: Border.all(
-                    color: context.colorScheme.outline,
+                    color: state.hasError
+                        ? context.colorScheme.error
+                        : context.colorScheme.outline,
                   ),
                 ),
               ),
@@ -72,7 +73,6 @@ class BlFormDropdownButton<T> extends StatelessWidget {
                   color: context.colorScheme.onPrimary,
                   borderRadius: BorderRadius.circular(15),
                   border: Border.all(
-                    width: 2,
                     color: context.colorScheme.outline,
                   ),
                 ),
@@ -81,7 +81,11 @@ class BlFormDropdownButton<T> extends StatelessWidget {
               value: dropdownValue,
               hint: Text(
                 hint,
-                style: context.textTheme.bodyLarge,
+                style: context.textTheme.bodyLarge?.copyWith(
+                  color: state.hasError
+                      ? context.colorScheme.error
+                      : context.colorScheme.onSurface,
+                ),
               ),
               items: items,
               onChanged: (v) {
@@ -96,10 +100,10 @@ class BlFormDropdownButton<T> extends StatelessWidget {
             ),
             if (state.hasError)
               Padding(
-                padding: const EdgeInsets.only(top: 4),
+                padding: const EdgeInsets.only(top: 4, left: 14),
                 child: Text(
                   state.errorText ?? '',
-                  style: context.textTheme.bodyLarge?.copyWith(
+                  style: context.textTheme.bodySmall?.copyWith(
                     color: context.colorScheme.error,
                   ),
                 ),

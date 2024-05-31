@@ -32,5 +32,10 @@ abstract class BlTheme {
     iconTheme: const IconThemeData(
       color: BlColors.inkDark,
     ),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        foregroundColor: BlColors.primaryBase,
+      ),
+    ),
   );
 }

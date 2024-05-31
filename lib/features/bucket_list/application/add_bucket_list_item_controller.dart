@@ -22,7 +22,7 @@ class AddBucketListItemController extends _$AddBucketListItemController {
         .addBucketListItem(item)
         .run();
 
-    result.fold(
+    state = result.fold(
       LoadableState.error,
       LoadableState.success,
     );

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bucket_list/domain/bucket_list/models/bucket_list.dart';
 import 'package:bucket_list/features/bucket_list/add_bucket_list_item_page.dart';
 import 'package:bucket_list/features/bucket_list/add_bucket_list_page.dart';
 import 'package:bucket_list/features/dashboard/dashboard_page.dart';
