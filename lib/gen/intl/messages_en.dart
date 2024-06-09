@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid phone number"),
         "err_wrong_repeated_password":
             MessageLookupByLibrary.simpleMessage("The passwords do not match."),
+        "items": MessageLookupByLibrary.simpleMessage("Completed items"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "no_data": MessageLookupByLibrary.simpleMessage("No data"),
         "no_results": MessageLookupByLibrary.simpleMessage("No results"),

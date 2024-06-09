@@ -60,6 +60,16 @@ class S {
     );
   }
 
+  /// `Completed items`
+  String get items {
+    return Intl.message(
+      'Completed items',
+      name: 'items',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Cancel`
   String get cancel {
     return Intl.message(
