@@ -15,33 +15,34 @@ class BucketListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.maxFinite,
+      height: double.maxFinite,
       decoration: BoxDecoration(
         boxShadow: BlDecorations.shadowMedium,
         borderRadius: BorderRadius.circular(8),
-        color: context.theme.colorScheme.surfaceDim,
+        color: context.theme.colorScheme.surfaceTint,
       ),
       clipBehavior: Clip.antiAlias,
-      child: Row(
+      child: Column(
         children: [
-          Column(
-            children: [
-              BlCachedImage(
-                imageUrl: bucketList.imageUrl,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: context.theme.colorScheme.surface,
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 12,
-                ),
-                child: Text(
-                  bucketList.name,
-                  style: context.textTheme.headlineMedium,
-                ),
-              ),
-            ],
+          Expanded(
+            child: BlCachedImage(
+              imageUrl: bucketList.imageUrl,
+            ),
+          ),
+          Container(
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+              color: context.theme.colorScheme.surface,
+            ),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 12,
+              vertical: 8,
+            ),
+            child: Text(
+              bucketList.name,
+              style: context.textTheme.bodyMedium,
+            ),
           ),
         ],
       ),

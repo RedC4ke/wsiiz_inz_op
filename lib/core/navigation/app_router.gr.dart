@@ -27,6 +27,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AddBucketListPage(),
       );
     },
+    BucketListRoute.name: (routeData) {
+      final args = routeData.argsAs<BucketListRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: BucketListPage(
+          bucketList: args.bucketList,
+          key: args.key,
+        ),
+      );
+    },
     DashboardRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -86,6 +96,44 @@ class AddBucketListRoute extends PageRouteInfo<void> {
   static const String name = 'AddBucketListRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [BucketListPage]
+class BucketListRoute extends PageRouteInfo<BucketListRouteArgs> {
+  BucketListRoute({
+    required BucketList bucketList,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          BucketListRoute.name,
+          args: BucketListRouteArgs(
+            bucketList: bucketList,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'BucketListRoute';
+
+  static const PageInfo<BucketListRouteArgs> page =
+      PageInfo<BucketListRouteArgs>(name);
+}
+
+class BucketListRouteArgs {
+  const BucketListRouteArgs({
+    required this.bucketList,
+    this.key,
+  });
+
+  final BucketList bucketList;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'BucketListRouteArgs{bucketList: $bucketList, key: $key}';
+  }
 }
 
 /// generated route for
