@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'bucket_list_item_geolocation.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class BucketListItemGeolocation with EquatableMixin {
   BucketListItemGeolocation({
     required this.name,

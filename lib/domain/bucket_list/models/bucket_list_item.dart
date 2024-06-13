@@ -5,7 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'bucket_list_item.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class BucketListItem extends FirestoreModel with EquatableMixin {
   BucketListItem({
     required this.listId,

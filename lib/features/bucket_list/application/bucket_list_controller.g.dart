@@ -7,7 +7,7 @@ part of 'bucket_list_controller.dart';
 // **************************************************************************
 
 String _$bucketListControllerHash() =>
-    r'83ca07e786b357ab54e8c6aae021e759f6e06772';
+    r'd3b18f59c4740c6098aaace241d2a8386695b188';
 
 /// Copied from Dart SDK
 class _SystemHash {

@@ -26,5 +26,5 @@ Map<String, dynamic> _$BucketListItemToJson(BucketListItem instance) =>
       'title': instance.title,
       'description': instance.description,
       'isCompleted': instance.isCompleted,
-      'geolocation': instance.geolocation,
+      'geolocation': instance.geolocation?.toJson(),
     };

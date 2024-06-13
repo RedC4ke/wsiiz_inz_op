@@ -17,7 +17,7 @@ class BlFab extends StatelessWidget {
       ),
       child: FloatingActionButton(
         onPressed: () {
-          context.pushRoute(const AddBucketListItemRoute());
+          context.pushRoute(AddBucketListItemRoute());
         },
         child: Stack(
           children: [

@@ -18,7 +18,11 @@ class BlAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: title != null ? Text(title!) : null,
       elevation: 0,
-      actions: actions,
+      centerTitle: true,
+      actions: [
+        ...actions,
+        const SizedBox(width: 6),
+      ],
     );
   }
 }

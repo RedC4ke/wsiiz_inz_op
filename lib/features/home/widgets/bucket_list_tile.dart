@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:bucket_list/core/navigation/app_router.dart';
 import 'package:bucket_list/core/theme/bl_decorations.dart';
 import 'package:bucket_list/core/utils/extensions.dart';
 import 'package:bucket_list/core/widgets/bl_cached_image.dart';
@@ -23,28 +25,36 @@ class BucketListTile extends StatelessWidget {
         color: context.theme.colorScheme.surfaceTint,
       ),
       clipBehavior: Clip.antiAlias,
-      child: Column(
-        children: [
-          Expanded(
-            child: BlCachedImage(
-              imageUrl: bucketList.imageUrl,
-            ),
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          onTap: () => context.pushRoute(
+            BucketListRoute(bucketList: bucketList),
           ),
-          Container(
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-              color: context.theme.colorScheme.surface,
-            ),
-            padding: const EdgeInsets.symmetric(
-              horizontal: 12,
-              vertical: 8,
-            ),
-            child: Text(
-              bucketList.name,
-              style: context.textTheme.bodyMedium,
-            ),
+          child: Column(
+            children: [
+              Expanded(
+                child: BlCachedImage(
+                  imageUrl: bucketList.imageUrl,
+                ),
+              ),
+              Container(
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: context.theme.colorScheme.surface,
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 8,
+                ),
+                child: Text(
+                  bucketList.name,
+                  style: context.textTheme.bodyMedium,
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

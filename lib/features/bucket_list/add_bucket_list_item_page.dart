@@ -21,7 +21,12 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 @RoutePage()
 class AddBucketListItemPage extends HookConsumerWidget {
-  const AddBucketListItemPage({super.key});
+  const AddBucketListItemPage({
+    this.bucketList,
+    super.key,
+  });
+
+  final BucketList? bucketList;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -38,7 +43,7 @@ class AddBucketListItemPage extends HookConsumerWidget {
     );
 
     final formKey = useMemoized(GlobalKey<FormState>.new);
-    final bucketListState = useState<BucketList?>(null);
+    final bucketListState = useState<BucketList?>(bucketList);
     final nameController = useTextEditingController();
     final descriptionController = useTextEditingController();
     final locationState = useState<AutocompletePrediction?>(null);
@@ -65,7 +70,7 @@ class AddBucketListItemPage extends HookConsumerWidget {
 
       ref
           .read(addBucketListItemControllerProvider.notifier)
-          .addBucketListItem(item: item);
+          .addBucketListItem(item: item, list: bucketListState.value);
     }
 
     return Stack(
