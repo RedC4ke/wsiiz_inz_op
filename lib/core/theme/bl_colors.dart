@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class BLColors {
+abstract class BlColors {
   /// inkDarkest figma properties
   /// hex: #090a0a
   /// opacity: 1

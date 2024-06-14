@@ -15,6 +15,33 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AddBucketListItemRoute.name: (routeData) {
+      final args = routeData.argsAs<AddBucketListItemRouteArgs>(
+          orElse: () => const AddBucketListItemRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: AddBucketListItemPage(
+          bucketList: args.bucketList,
+          key: args.key,
+        ),
+      );
+    },
+    AddBucketListRoute.name: (routeData) {
+      return AutoRoutePage<BucketList>(
+        routeData: routeData,
+        child: const AddBucketListPage(),
+      );
+    },
+    BucketListRoute.name: (routeData) {
+      final args = routeData.argsAs<BucketListRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: BucketListPage(
+          bucketList: args.bucketList,
+          key: args.key,
+        ),
+      );
+    },
     DashboardRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -46,6 +73,96 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AddBucketListItemPage]
+class AddBucketListItemRoute extends PageRouteInfo<AddBucketListItemRouteArgs> {
+  AddBucketListItemRoute({
+    BucketList? bucketList,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          AddBucketListItemRoute.name,
+          args: AddBucketListItemRouteArgs(
+            bucketList: bucketList,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'AddBucketListItemRoute';
+
+  static const PageInfo<AddBucketListItemRouteArgs> page =
+      PageInfo<AddBucketListItemRouteArgs>(name);
+}
+
+class AddBucketListItemRouteArgs {
+  const AddBucketListItemRouteArgs({
+    this.bucketList,
+    this.key,
+  });
+
+  final BucketList? bucketList;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'AddBucketListItemRouteArgs{bucketList: $bucketList, key: $key}';
+  }
+}
+
+/// generated route for
+/// [AddBucketListPage]
+class AddBucketListRoute extends PageRouteInfo<void> {
+  const AddBucketListRoute({List<PageRouteInfo>? children})
+      : super(
+          AddBucketListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AddBucketListRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [BucketListPage]
+class BucketListRoute extends PageRouteInfo<BucketListRouteArgs> {
+  BucketListRoute({
+    required BucketList bucketList,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          BucketListRoute.name,
+          args: BucketListRouteArgs(
+            bucketList: bucketList,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'BucketListRoute';
+
+  static const PageInfo<BucketListRouteArgs> page =
+      PageInfo<BucketListRouteArgs>(name);
+}
+
+class BucketListRouteArgs {
+  const BucketListRouteArgs({
+    required this.bucketList,
+    this.key,
+  });
+
+  final BucketList bucketList;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'BucketListRouteArgs{bucketList: $bucketList, key: $key}';
+  }
 }
 
 /// generated route for

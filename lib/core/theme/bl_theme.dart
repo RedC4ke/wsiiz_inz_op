@@ -4,17 +4,17 @@ import 'package:bucket_list/core/theme/bl_input_decoration_theme.dart';
 import 'package:bucket_list/core/theme/bl_text_theme.dart';
 import 'package:flutter/material.dart';
 
-abstract class BLTheme {
+abstract class BlTheme {
   static final ThemeData light = ThemeData(
     useMaterial3: true,
     textTheme: BlTextTheme.theme.apply(
-      displayColor: BLColors.inkDark,
-      bodyColor: BLColors.inkDark,
+      displayColor: BlColors.inkDark,
+      bodyColor: BlColors.inkDark,
     ),
-    colorScheme: BlColorScheme.scheme,
-    inputDecorationTheme: BlInputDecorationTheme.theme,
+    colorScheme: BlColorScheme.light,
+    inputDecorationTheme: BlInputDecorationTheme.themeLight,
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: BLColors.primaryBase,
+      backgroundColor: BlColors.primaryBase,
       shape: CircleBorder(),
       sizeConstraints: BoxConstraints.tightFor(
         height: 52,
@@ -28,6 +28,14 @@ abstract class BLTheme {
     dividerTheme: const DividerThemeData(
       space: 1,
       thickness: 1,
+    ),
+    iconTheme: const IconThemeData(
+      color: BlColors.inkDark,
+    ),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        foregroundColor: BlColors.primaryBase,
+      ),
     ),
   );
 }

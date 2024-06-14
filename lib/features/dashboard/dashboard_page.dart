@@ -46,11 +46,11 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: _routes,
-      floatingActionButton: const BLFab(),
+      floatingActionButton: const BlFab(),
       floatingActionButtonLocation: const CenteredBeveledFABLocation(),
       extendBody: true,
       bottomNavigationBuilder: (_, tabsRouter) {
-        return BLBottomAppBar(router: tabsRouter);
+        return BlBottomAppBar(router: tabsRouter);
       },
     );
   }

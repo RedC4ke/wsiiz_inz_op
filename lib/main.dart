@@ -1,18 +1,18 @@
-import 'package:bucket_list/bucket_list.dart';
+import 'package:bucket_list/app.dart';
 import 'package:bucket_list/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Firebase.initializeApp(
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  SystemChrome.setPreferredOrientations([
+  await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
@@ -25,5 +25,5 @@ void main() {
     ),
   );
 
-  runApp(const ProviderScope(child: BucketList()));
+  runApp(const ProviderScope(child: App()));
 }
