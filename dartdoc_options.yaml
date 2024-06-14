@@ -1,0 +1,2 @@
+dartdoc:
+  nodoc: ["**.g.dart", "**.freezed.dart"]
